@@ -11,7 +11,9 @@ const user = mySqlPool.define(
         firstName: {type: Sequelize.TEXT},
         lastName:  {type: Sequelize.TEXT},
         email:     {type: Sequelize.TEXT},
-        idUserType:{type: Sequelize.NUMBER}
+        idUserType:{type: Sequelize.NUMBER},
+        createDate:{type: Sequelize.DATE},
+        active:    {type: Sequelize.NUMBER}
     },
     {
         freezeTableName : true,
