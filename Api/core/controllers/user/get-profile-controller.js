@@ -1,6 +1,7 @@
 'use strict'
 
 const user = require('../../database/models/User');
+const logger = require('../../../core/utils/logger');
 
 /**
  * 
@@ -20,11 +21,15 @@ async function getUserProfile(req, res, next){
         });
         
         if (userData != null) {
+            logger.info('getListUser : Request OK');
             res.status(200).json(userData);
-        } else { res.status(404).json('No existen usuarios'); }
+        } else { 
+            logger.info('getListUser : Request EMPTY LIST');
+            res.status(404).json('No existen usuarios'); 
+        }
     } catch (error) {
-        res.status(404).json(
-            error);
+        logger.info('getListUser : Request ERROR');
+        res.status(404).json(error);
     }
 
 }
