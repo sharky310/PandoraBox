@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 
 const user = require('../../database/models/User');
 const logger = require('../../../core/utils/logger');
 
 /**
- * 
- * @param {*} req 
- * @param {*} res - Devuelve la ficha de un usuario según su email
- * @param {*} next 
+ * @api {get} /api/profile GetUserProfile
+ * @apiName GetUserProfile
+ * @apiGroup User
+ * @apiParam {String} email
  */
 async function getUserProfile(req, res, next){
 

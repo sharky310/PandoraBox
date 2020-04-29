@@ -1,13 +1,15 @@
-'use strict'
+'use strict';
 
 const user = require('../../database/models/User');
 const logger = require('../../../core/utils/logger');
 
 /**
- * Devuelve el listado de usuarios. Es posible añadir filtros según lo siguiente
- * ?active = 0,1 - Usuarios activos o no
+ * @api {get} /api/profile/list GetListUsers
+ * @apiName GetListUser
+ * @apiGroup User
+ * @apiParam {int} [active]
  */
-async function getListUser(req, res, next){
+async function getListUsers(req, res, next){
     let listData = null;
 
     try{
@@ -37,4 +39,4 @@ async function getListUser(req, res, next){
     }
 }
 
-module.exports = getListUser;
+module.exports = getListUsers;
