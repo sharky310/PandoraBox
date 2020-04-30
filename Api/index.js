@@ -40,6 +40,8 @@ app.use((err, req, res, next) => {
  * Routes
  */
 app.use(nexus, routers.userRouter);
+app.use(nexus, routers.projectRouter);
+app.use(nexus, routers.userTypeRouter);
 
  //Init server
 (function init() {
