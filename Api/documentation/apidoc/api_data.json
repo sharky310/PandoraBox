@@ -1,5 +1,25 @@
 [
   {
+    "type": "get",
+    "url": "/api/userType",
+    "title": "GetUserTypes",
+    "name": "GetUserTypes",
+    "group": "GetUserTypes",
+    "version": "0.0.0",
+    "filename": "core/controllers/userType/get-user-type-controller.js",
+    "groupTitle": "GetUserTypes"
+  },
+  {
+    "type": "get",
+    "url": "/api/project",
+    "title": "GetProject",
+    "name": "GetProject",
+    "group": "Project",
+    "version": "0.0.0",
+    "filename": "core/controllers/project/get-project-controller.js",
+    "groupTitle": "Project"
+  },
+  {
     "type": "post",
     "url": "/api/profile/create",
     "title": "PostUser",

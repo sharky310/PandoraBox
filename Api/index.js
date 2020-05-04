@@ -50,3 +50,5 @@ app.use(nexus, routers.userTypeRouter);
         console.log(`The backend server is running in ${port}. Have a nice day`);
     });
 })();
+
+module.exports = app;
