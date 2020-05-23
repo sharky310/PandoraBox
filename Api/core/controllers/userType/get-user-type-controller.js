@@ -23,6 +23,7 @@ async function getUserTypes(req, res, next){
     } catch (error) {
         logger.info('getUserTypes : Request ERROR');
         res.status(404).json(error);
+        
     }
 }
 

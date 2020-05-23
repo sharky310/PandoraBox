@@ -1,0 +1,15 @@
+version: '1'
+services:
+    back:
+        build: ./Api
+        ports:
+        volumes:
+        depends_on: database
+        links:
+    front:
+        build: ./Web
+        ports:
+        volumes:
+        depends_on: back
+        links:
+    database:
